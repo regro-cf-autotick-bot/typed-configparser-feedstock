@@ -1,5 +1,5 @@
 {% set name = "typed-configparser" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/typed_configparser-{{ version }}.tar.gz
-  sha256: f845d9d5b134ca1fa90060e73c4ac79503bc99a406333a1198eb05bee79fff8e
+  sha256: 0a0ab47965151d095e0ad5f00aeb59a7ef95a5f9b6f045ac8d4417d91ba46d4d
 
 build:
   noarch: python
@@ -21,6 +21,9 @@ requirements:
     - pip
   run:
     - python >=3.8
+
+    # Not listed but is needed
+    - typing_extensions
 
 test:
   imports:
