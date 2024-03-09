@@ -22,6 +22,9 @@ requirements:
   run:
     - python >=3.8
 
+    # Not listed but is needed
+    - typing_extensions
+
 test:
   imports:
     - typed_configparser
